@@ -1,0 +1,576 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>fb-messenger-bot-api</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">fb-messenger-bot-api</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1> fb-messenger-bot-api</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<h1 id="fb-messenger-bot-api">fb-messenger-bot-api</h1>
+				<h4 id="nodejs-facebook-messenger-api">NodeJS Facebook Messenger API</h4>
+				<p><a href="http://npm.im/fb-messenger-bot-api"><img src="https://img.shields.io/npm/v/fb-messenger-bot-api.svg" alt="version"></a>
+					<a href="https://travis-ci.org/crisboarna/fb-messenger-bot-api"><img src="https://img.shields.io/travis/crisboarna/fb-messenger-bot-api.svg" alt="travis build"></a>
+					<a href="https://codecov.io/gh/crisboarna/fb-messenger-bot-api"><img src="https://img.shields.io/codecov/c/github/crisboarna/fb-messenger-bot-api.svg" alt="codecov coverage"></a>
+					<a href="https://www.codacy.com/app/crisboarna/fb-messenger-bot-api?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=crisboarna/fb-messenger-bot-api&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/8d87ae38dea34aa09d0daa0ab81b81cd" alt="Codacy Badge"></a>
+					<a href="https://david-dm.org/crisboarna/fb-messenger-bot-api"><img src="https://img.shields.io/david/crisboarna/fb-messenger-bot-api.svg" alt="dependency status"></a>
+					<a href="https://snyk.io/package/npm/fb-messenger-bot-api"><img src="https://snyk.io/package/npm/fb-messenger-bot-api/badge.svg" alt="Known Vulnerabilities"></a>
+					<a href="LICENSE"><img src="https://img.shields.io/npm/l/fb-messenger-bot-api.svg" alt="MIT License"></a>
+					<a href="https://github.com/semantic-release/semantic-release"><img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square" alt="semantic-release"></a>
+					<a href="http://commitizen.github.io/cz-cli/"><img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square" alt="Commitizen friendly"></a>
+					<img src="https://img.shields.io/badge/stability-stable-green.svg" alt="stability-stable">
+					<a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/crisboarna/fb-messenger-bot-api.svg" alt="Greenkeeper"></a>
+				<a href="https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg"><img src="https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg" alt="code style"></a></p>
+				<h2 id="installation">Installation</h2>
+				<pre><code>npm <span class="hljs-keyword">install</span> fb-messenger-bot-api
+</code></pre><h2 id="table-of-contents">Table of Contents</h2>
+				<ul>
+					<li><a href="#documentation">Documentation</a></li>
+					<li><a href="#features">Features</a></li>
+					<li><a href="#setup">Setup</a></li>
+					<li><a href="#sending-messages">Sending Messages</a><ul>
+							<li><a href="#text-message">Text Message</a></li>
+							<li><a href="#image-message">Image Message</a></li>
+							<li><a href="#audio-message">Audio Message</a></li>
+							<li><a href="#video-message">Video Message</a></li>
+							<li><a href="#file-message">File Message</a></li>
+							<li><a href="#buttons-message">Buttons Message</a></li>
+							<li><a href="#template-message">Template Message</a></li>
+							<li><a href="#generic-template-list-(-horizontal-scroll-list-">Generic Template List ( Horizontal Scroll List)</a>)</li>
+							<li><a href="#list-message-(-vertical-scroll-list-">List Message ( Vertical Scroll List)</a>)</li>
+							<li><a href="#mark-as-seen">Mark as Seen</a></li>
+							<li><a href="#toggle-writing-bubble">Toggle Writing Bubble</a></li>
+							<li><a href="#user-profile">User Profile</a></li>
+						</ul>
+					</li>
+					<li><a href="#setting-messenger-profile">Setting Messenger Profile</a><ul>
+							<li><a href="#setting-greeting-message">Setting Greeting Message</a></li>
+							<li><a href="#setting-get-started-button">Setting Get Started Button</a></li>
+							<li><a href="#setting-persistent-menu">Setting Persistent Menu</a></li>
+						</ul>
+					</li>
+					<li><a href="#sending-facebook-page-posts">Sending Facebook Page Posts</a><ul>
+							<li><a href="#page-image-posts">Page Image Posts</a></li>
+							<li><a href="#page-link-posts">Page Link Posts</a></li>
+						</ul>
+					</li>
+					<li><a href="#validating-facebook-webhook">Validating Facebook Webhook</a></li>
+					<li><a href="#complete-example">Complete Example</a></li>
+					<li><a href="#creating-facebook-app">Creating Facebook App</a></li>
+					<li><a href="#contributing">Contributing</a></li>
+				</ul>
+				<h2 id="documentation">Documentation</h2>
+				<p>Documentation can be found <a href="https://crisboarna.github.io/fb-messenger-bot-api/">here</a></p>
+				<h2 id="features">Features</h2>
+				<ul>
+					<li>Most of Send API support (<ul>
+							<li><code>Text</code> </li>
+							<li><code>Image</code>, <code>Audio</code>, <code>Video</code>, <code>File</code> </li>
+							<li>Buttons: <code>Buy</code>, <code>Call</code>, <code>Game</code>, <code>Log In</code>, <code>Log Out</code>, <code>Postback</code>, <code>Share</code>, <code>URL</code></li>
+							<li>Template: <code>Button</code>, <code>Generic</code>, <code>List</code>, <code>Media</code>, <code>OpenGraph</code>, <code>Receipt</code>, <code>Airline Boarding Pass</code>, <code>Airline Check In</code>, <code>Airline Flight Update</code>, <code>Airline Itinerary</code> </li>
+							<li><code>Quick Reply</code></li>
+							<li><code>Typing</code> </li>
+							<li><code>Seen</code></li>
+						</ul>
+					</li>
+					<li>Full Page API support (Post Text, Post Image)</li>
+					<li>Full Profile API support (Get Started, Persistent Menu, Greeting)</li>
+					<li>Initial Webhook validation logic</li>
+					<li>Typescript code &amp; types<ul>
+							<li>Builders for every payload type</li>
+							<li>Container classes for every payload type</li>
+							<li>Interface definitions</li>
+							<li>Generic methods accepting all valid types</li>
+						</ul>
+					</li>
+					<li>Dynamic URL/ID payload option for Image, Audio, Video, File</li>
+					<li>Supports proxying</li>
+					<li>Promises and callback support on all functions, if no callback provided, promise returned, allows you to manage flow as you desire AND to <b>ensure message ordering</b><br /></li>
+					<li>Using latest Facebook API v3.0</li>
+				</ul>
+				<h2 id="setup">Setup</h2>
+				<p>Import</p>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> {&lt;DESIRED_CLASS&gt;} <span class="hljs-keyword">from</span> <span class="hljs-string">'fb-messenger-bot-api'</span>;
+</code></pre>
+				<h2 id="sending-messages">Sending Messages</h2>
+				<p>Initialize</p>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> {Client} <span class="hljs-keyword">from</span> <span class="hljs-string">'fb-messenger-bot-api'</span>;
+<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> Client(process.env.PAGE_ACCESS_TOKEN);
+</code></pre>
+				<p>Using proxy</p>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> {Client} <span class="hljs-keyword">from</span> <span class="hljs-string">'fb-messenger-bot-api'</span>;
+<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> Client(process.env.PAGE_ACCESS_TOKEN, { hostname:process.env.PROXY_HOST, port: process.env.PROXY_PORT });
+</code></pre>
+				<p>Defaults to <code>http</code> if no protocol provided</p>
+				<h3 id="text-message">Text Message</h3>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">await</span> client.sendTextMessage(senderId, &lt;MESSAGE&gt;);
+</code></pre>
+				<h3 id="image-message">Image Message</h3>
+				<h4 id="url-based-payload">URL Based Payload</h4>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> id = <span class="hljs-keyword">await</span> client.sendImageMessage(senderId, <span class="hljs-string">'https://s3.eu-west-1.amazonaws.com/bucketname/testbucket/20180104102000/profile.jpg'</span>);
+</code></pre>
+				<p>This method will have the image cached by facebook so every receiver after the first will get it quickly and can be used later on based on returned id. Alternatively returned value can be ignored and sent without assignment.</p>
+				<h4 id="id-based-payload">ID Based Payload</h4>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> id = <span class="hljs-keyword">await</span> client.sendImageMessage(senderId, id);
+</code></pre>
+				<h3 id="audio-message">Audio Message</h3>
+				<h4 id="url-based-payload">URL Based Payload</h4>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> id = <span class="hljs-keyword">await</span> client.sendAudioMessage(senderId, <span class="hljs-string">'https://s3.eu-west-1.amazonaws.com/bucketname/testbucket/20180104102000/motto.mp3'</span>);
+</code></pre>
+				<h4 id="id-based-payload">ID Based Payload</h4>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> id = <span class="hljs-keyword">await</span> client.sendAudioMessage(senderId, id);
+</code></pre>
+				<h3 id="video-message">Video Message</h3>
+				<h4 id="url-based-payload">URL Based Payload</h4>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> id = <span class="hljs-keyword">await</span> client.sendVideoMessage(senderId, <span class="hljs-string">'https://s3.eu-west-1.amazonaws.com/bucketname/testbucket/20180104102000/intro.mp4'</span>);
+</code></pre>
+				<h4 id="id-based-payload">ID Based Payload</h4>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> id = <span class="hljs-keyword">await</span> client.sendVideoMessage(senderId, id);
+</code></pre>
+				<h3 id="file-message">File Message</h3>
+				<h4 id="url-based-payload">URL Based Payload</h4>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> id = <span class="hljs-keyword">await</span> client.sendFileMessage(senderId, <span class="hljs-string">'https://s3.eu-west-1.amazonaws.com/bucketname/testbucket/20180104102000/logs.txt'</span>);
+</code></pre>
+				<h4 id="id-based-payload">ID Based Payload</h4>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> id = <span class="hljs-keyword">await</span> client.sendVideoMessage(senderId, id);
+</code></pre>
+				<h3 id="buttons-message">Buttons Message</h3>
+				<p>This examples shows how to use the provided builder classes as well to create every element of the payload in a concise programmatic manner.</p>
+				<p>All Button types have own builder with all properties supported by Facebook API available</p>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> builder = <span class="hljs-keyword">new</span> BuyButtonBuilder().setPayload(<span class="hljs-string">'Buy now'</span>).setPaymentSummary(<span class="hljs-string">'This is your soul'</span>).setTitle(<span class="hljs-string">'Unique Opportunity'</span>);
+<span class="hljs-keyword">await</span> client.sendButtonsMessage(senderId, &lt;BUTTONS TEXT&gt; [builder.build()])
+</code></pre>
+				<p><a href="https://developers.facebook.com/docs/messenger-platform/send-messages/template/button">Buttons format</a></p>
+				<h3 id="quick-reply-message">Quick Reply Message</h3>
+				<p>This example creates one Quick Reply bubble, use multiple sets &amp; <code>build()</code> and add results to array to have multiple quick replies up to Facebook limit of 11 per message</p>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> builder = <span class="hljs-keyword">new</span> QuickReplyBuilder().setContentType(QUICK_REPLY_TYPE.TEXT).setImageUrl(<span class="hljs-string">'https://s3.eu-west-1.amazonaws.com/bucketname/testbucket/20180104102000/profile.jpg'</span>).setTitle(<span class="hljs-string">'Quick replies'</span>);
+<span class="hljs-keyword">await</span> client.sendQuickReplyMessage(senderId, &lt;TEXT&gt;, [builder.build()]);
+</code></pre>
+				<p><a href="https://developers.facebook.com/docs/messenger-platform/send-messages/quick-replies">Quick Reply format</a></p>
+				<h3 id="generic-template-message-horizontal-scroll-list-">Generic Template Message ( Horizontal Scroll List )</h3>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> builder = <span class="hljs-keyword">new</span> GenericTemplateBuilder().setImageAspectRatio(<span class="hljs-string">'16:9'</span>).setSharable(<span class="hljs-literal">true</span>).setElements(...)
+<span class="hljs-keyword">await</span> client.sendTemplateMessage(senderId, builder.build());
+</code></pre>
+				<p><a href="https://developers.facebook.com/docs/messenger-platform/send-messages/template/generic">Generic Template element format</a></p>
+				<h3 id="list-message-vertical-scroll-list-">List Message ( Vertical Scroll List )</h3>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> builder = <span class="hljs-keyword">new</span> ListTemplateBuilder().setSharable(<span class="hljs-literal">true</span>).setElements(...);
+<span class="hljs-keyword">await</span> client.sendTemplateMessage(senderId, builder.build());
+</code></pre>
+				<p><code>top_element_style</code> if not provided defaults to <code>large</code></p>
+				<p><a href="https://developers.facebook.com/docs/messenger-platform/send-messages/template/list">List Template element format</a></p>
+				<h3 id="mark-as-seen">Mark as Seen</h3>
+				<pre><code class="lang-typescript">client.markSeen(senderId);
+</code></pre>
+				<p>As per all methods, callback can be provided. If no callback provided returns promise. Recommended to send and continue processing without waiting for reply.</p>
+				<h3 id="toggle-writing-bubble">Toggle writing bubble</h3>
+				<pre><code class="lang-typescript">client.toggleTyping(senderId, &lt;<span class="hljs-literal">true</span>/<span class="hljs-literal">false</span>&gt;);
+</code></pre>
+				<p>As per all methods, callback can be provided. If no callback provided returns promise. Recommended to send and continue processing without waiting for reply.
+				Defaults to <code>false</code> if no boolean parameter provided.</p>
+				<h3 id="user-profile">User Profile</h3>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> profileData = <span class="hljs-keyword">await</span> client.getUserProfile(senderId,[&lt;PROPERTIES&gt;]);
+</code></pre>
+				<p>Valid properties: <code>first_name</code>, <code>last_name</code>, <code>profile_pic</code>,<code>locale</code>, <code>timezone</code>, <code>gender</code>, <code>is_payment_enabled</code>, <code>last_ad_referral</code>
+				If none are given defaults to <code>first_name</code> only.</p>
+				<h2 id="setting-messenger-profile">Setting Messenger Profile</h2>
+				<p>Initialize</p>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> {Profile} <span class="hljs-keyword">from</span> <span class="hljs-string">'fb-messenger-bot-api'</span>;
+<span class="hljs-keyword">const</span> profile = <span class="hljs-keyword">new</span> Profile(process.env.PAGE_ACCESS_TOKEN);
+</code></pre>
+				<p>Using proxy</p>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> {Profile} <span class="hljs-keyword">from</span> <span class="hljs-string">'fb-messenger-bot-api'</span>;
+<span class="hljs-keyword">const</span> profile = <span class="hljs-keyword">new</span> Profile(process.env.PAGE_ACCESS_TOKEN, { hostname:process.env.PROXY_HOST, port: process.env.PROXY_PORT });
+</code></pre>
+				<h3 id="setting-greeting-message">Setting Greeting Message</h3>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> result = client.setGreetingMessage(<span class="hljs-string">'Message that will be visible first thing when opening chat window with your bot/page'</span>);
+</code></pre>
+				<h3 id="setting-get-started-button">Setting Get Started button</h3>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> client.setGetStartedAction(senderId, payload);
+</code></pre>
+				<p><code>payload</code> is the value that will be first sent when new user sends first message, once per user interaction</p>
+				<h3 id="setting-persistent-menu">Setting Persistent Menu</h3>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> client.setPersistentMenu(senderId, [&lt;MENU_ENTRIES&gt;])
+</code></pre>
+				<p>This is a burger menu appearing next to the chat input field where users can click and get direct interaction shortcuts to specific functionality of the bot.
+				<a href="https://developers.facebook.com/docs/messenger-platform/reference/messenger-profile-api/persistent-menu">Persistent menu format</a></p>
+				<h2 id="sending-facebook-page-posts">Sending Facebook Page Posts</h2>
+				<p>Initialize</p>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> {Page} <span class="hljs-keyword">from</span> <span class="hljs-string">'fb-messenger-bot-api'</span>;
+<span class="hljs-keyword">const</span> page = <span class="hljs-keyword">new</span> Page(process.env.PAGE_ACCESS_TOKEN);
+</code></pre>
+				<p>Using proxy</p>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">const</span> page = <span class="hljs-keyword">new</span> Page(process.env.PAGE_ACCESS_TOKEN, { hostname:process.env.PROXY_HOST, port: process.env.PROXY_PORT });
+</code></pre>
+				<p>Defaults to <code>http</code> if no protocol provided</p>
+				<p>Requires a never expiring <code>publishing_actions</code> token that can be obtained by following <a href="https://www.rocketmarketinginc.com/blog/get-never-expiring-facebook-page-access-token/">this</a> guide.</p>
+				<h3 id="page-image-posts">Page Image Posts</h3>
+				<pre><code class="lang-typescript">page.setImageUrl(<span class="hljs-string">`&lt;URL&gt;`</span>).setImageCaption(<span class="hljs-string">`&lt;CAPTION&gt;`</span>).sendImage(<span class="hljs-string">`&lt;CALLBACK&gt;`</span>);
+</code></pre>
+				<p><code>&lt;URL&gt;</code> is the url of the image being posted</p>
+				<p><code>&lt;CAPTION&gt;</code> is the text you want on top of the image</p>
+				<p><code>&lt;CALLBACK&gt;</code> is optional callback otherwise promise is returned</p>
+				<h3 id="page-link-posts">Page Link Posts</h3>
+				<pre><code class="lang-typescript">page.setPostLink(<span class="hljs-string">`&lt;URL&gt;`</span>).setPostText(<span class="hljs-string">`&lt;MESSAGE&gt;`</span>).sendPost(<span class="hljs-string">`&lt;CALLBACK&gt;`</span>);
+</code></pre>
+				<p><code>&lt;URL&gt;</code> is the url of the link being posted</p>
+				<p><code>&lt;MESSAGE&gt;</code> is the text you want on top of the link</p>
+				<p><code>&lt;CALLBACK&gt;</code> is optional callback otherwise promise is returned</p>
+				<h2 id="validating-facebook-webhook">Validating Facebook Webhook</h2>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> express <span class="hljs-keyword">from</span> <span class="hljs-string">'express'</span>;
+<span class="hljs-keyword">const</span> router = express.Router();
+<span class="hljs-keyword">import</span> {ValidateWebhook} <span class="hljs-keyword">from</span> <span class="hljs-string">'fb-messenger-bot-api'</span>;
+router.get(<span class="hljs-string">'/api/webhook'</span>, ValidateWebhook.validate);
+</code></pre>
+				<p>Example based on usage with Express Router, can use any other middleware which passes in the req and response objects.
+				Assumes verification token set under <code>process.env.FB_VERIFICATION_TOKEN</code>.</p>
+				<p>Alternatively, if you want to pass in your set token in a different manner or under different name you can use </p>
+				<pre><code class="lang-javascript">ValidateWebhook.validateWithToken(req, res, &lt;TOKEN&gt;);
+</code></pre>
+				<p>This allows you to obtain the value as you wish and still use it as above with the help of currying.</p>
+				<pre><code class="lang-javascript">...
+const validateWebhook = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">validateWebhook</span>(<span class="hljs-params">token</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> ValidateWebhook.validateWithToken(req, res, token);
+}
+<span class="hljs-keyword">const</span> validator = validateWebhook(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">TOKEN</span>&gt;</span>);
+router.get('/api/webhook/',validator);</span>
+</code></pre>
+				<h2 id="complete-example">Complete example</h2>
+				<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> express <span class="hljs-keyword">from</span> <span class="hljs-string">'express'</span>;
+<span class="hljs-keyword">import</span> {Client, ValidateWebhook} <span class="hljs-keyword">from</span> <span class="hljs-string">'fb-messenger-bot-api'</span>;
+<span class="hljs-keyword">const</span> router = express.Router();
+<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> Client(process.env.PAGE_ACCESS_TOKEN);
+...
+router.get(<span class="hljs-string">'/api/webhook'</span>, ValidateWebhook.validate);
+...
+try {
+  <span class="hljs-keyword">await</span> client.markSeen(senderId)
+  <span class="hljs-keyword">await</span> client.toggleTyping(senderId, <span class="hljs-literal">true</span>);
+  <span class="hljs-keyword">await</span> client.sendTextMessage(senderId, <span class="hljs-string">'Hello'</span>);
+} <span class="hljs-keyword">catch</span>(error) {
+  <span class="hljs-built_in">console</span>.log(error);
+}
+...
+<span class="hljs-comment">//promise based reaction on message send confirmation</span>
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> client.sendTextMessage(senderId, <span class="hljs-string">'Hello'</span>);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Result sent with: <span class="hljs-subst">${result}</span>`</span>);
+...
+<span class="hljs-comment">//callback based reaction on message confirmation</span>
+client.sendTextMessage(senderId, <span class="hljs-string">'Hello'</span>, (result) =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Result sent with: <span class="hljs-subst">${result}</span>`</span>));
+...
+<span class="hljs-comment">//silent message sending without waiting for result, and continue processing</span>
+client.sendTextMessage(senderId,<span class="hljs-string">'Hello'</span>);
+</code></pre>
+				<h2 id="creating-facebook-app">Creating Facebook app</h2>
+				<p><a href="https://developers.facebook.com/docs/messenger-platform/guides/quick-start">See Facebook Guide</a></p>
+				<h2 id="contributing">Contributing</h2>
+				<ul>
+					<li>Source hosted at <a href="https://github.com/crisboarna/fb-messenger-bot-api">GitHub</a></li>
+					<li>Report issues/Questions/Feature requests on <a href="https://github.com/crisboarna/fb-messenger-bot-api/issues">GitHub Issues</a></li>
+				</ul>
+				<p>Pull requests are very welcome!</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_quickreplybuilder_.html">"builders/<wbr>Quick<wbr>Reply<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_buttons_buybuttonbuilder_.html">"builders/buttons/<wbr>Buy<wbr>Button<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_buttons_callbuttonbuilder_.html">"builders/buttons/<wbr>Call<wbr>Button<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_buttons_gameplaybuttonbuilder_.html">"builders/buttons/<wbr>Game<wbr>Play<wbr>Button<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_buttons_loginbuttonbuilder_.html">"builders/buttons/<wbr>Log<wbr>InButton<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_buttons_logoutbuttonbuilder_.html">"builders/buttons/<wbr>Log<wbr>Out<wbr>Button<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_buttons_postbackbuttonbuilder_.html">"builders/buttons/<wbr>Postback<wbr>Button<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_buttons_sharebuttonbuilder_.html">"builders/buttons/<wbr>Share<wbr>Button<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_buttons_urlbuttonbuilder_.html">"builders/buttons/URLButton<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_buttons_index_.html">"builders/buttons/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_index_.html">"builders/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_templates_airlineboardingpasstemplatebuilder_.html">"builders/templates/<wbr>Airline<wbr>Boarding<wbr>Pass<wbr>Template<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_templates_airlinecheckintemplatebuilder_.html">"builders/templates/<wbr>Airline<wbr>Check<wbr>InTemplate<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_templates_airlineflightupdatetemplatebuilder_.html">"builders/templates/<wbr>Airline<wbr>Flight<wbr>Update<wbr>Template<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_templates_airlineitinerarytemplatebuilder_.html">"builders/templates/<wbr>Airline<wbr>Itinerary<wbr>Template<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_templates_buttontemplatebuilder_.html">"builders/templates/<wbr>Button<wbr>Template<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_templates_generictemplatebuilder_.html">"builders/templates/<wbr>Generic<wbr>Template<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_templates_listtemplatebuilder_.html">"builders/templates/<wbr>List<wbr>Template<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_templates_mediatemplatebuilder_.html">"builders/templates/<wbr>Media<wbr>Template<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_templates_opengraphtemplatebuilder_.html">"builders/templates/<wbr>Open<wbr>Graph<wbr>Template<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_builders_templates_receipttemplatebuilder_.html">"builders/templates/<wbr>Receipt<wbr>Template<wbr>Builder"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_quickreply_.html">"classes/<wbr>Quick<wbr>Reply"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_buttons_button_.html">"classes/buttons/<wbr>Button"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_buttons_buybutton_.html">"classes/buttons/<wbr>Buy<wbr>Button"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_buttons_callbutton_.html">"classes/buttons/<wbr>Call<wbr>Button"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_buttons_gameplaybutton_.html">"classes/buttons/<wbr>Game<wbr>Play<wbr>Button"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_buttons_loginbutton_.html">"classes/buttons/<wbr>Log<wbr>InButton"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_buttons_logoutbutton_.html">"classes/buttons/<wbr>Log<wbr>Out<wbr>Button"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_buttons_postbackbutton_.html">"classes/buttons/<wbr>Postback<wbr>Button"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_buttons_sharebutton_.html">"classes/buttons/<wbr>Share<wbr>Button"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_buttons_urlbutton_.html">"classes/buttons/URLButton"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_buttons_index_.html">"classes/buttons/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_index_.html">"classes/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_templates_abstractmessagetemplate_.html">"classes/templates/<wbr>Abstract<wbr>Message<wbr>Template"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_templates_airlineboardingpasstemplate_.html">"classes/templates/<wbr>Airline<wbr>Boarding<wbr>Pass<wbr>Template"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_templates_airlinecheckintemplate_.html">"classes/templates/<wbr>Airline<wbr>Check<wbr>InTemplate"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_templates_airlineflightupdatetemplate_.html">"classes/templates/<wbr>Airline<wbr>Flight<wbr>Update<wbr>Template"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_templates_airlineitinerarytemplate_.html">"classes/templates/<wbr>Airline<wbr>Itinerary<wbr>Template"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_templates_buttontemplate_.html">"classes/templates/<wbr>Button<wbr>Template"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_templates_generictemplate_.html">"classes/templates/<wbr>Generic<wbr>Template"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_templates_listtemplate_.html">"classes/templates/<wbr>List<wbr>Template"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_templates_mediatemplate_.html">"classes/templates/<wbr>Media<wbr>Template"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_templates_opengraphtemplate_.html">"classes/templates/<wbr>Open<wbr>Graph<wbr>Template"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_classes_templates_receipttemplate_.html">"classes/templates/<wbr>Receipt<wbr>Template"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_client_client_.html">"client/<wbr>Client"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_enums_index_.html">"enums/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_index_.html">"index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_interfaces_buttons_.html">"interfaces/<wbr>Buttons"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_interfaces_connectivity_.html">"interfaces/<wbr>Connectivity"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_interfaces_quickreplies_.html">"interfaces/<wbr>Quick<wbr>Replies"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_interfaces_templates_.html">"interfaces/<wbr>Templates"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_interfaces_index_.html">"interfaces/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_page_page_.html">"page/<wbr>Page"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_profile_profile_.html">"profile/<wbr>Profile"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_util_utils_.html">"util/<wbr>Utils"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_verification_verification_.html">"verification/<wbr>Verification"</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
